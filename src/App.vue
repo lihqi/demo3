@@ -1,205 +1,188 @@
 <template>
   <div id="app">
+    <el-col :span="16" :offset="6">
 
-   
-    <el-col :offset="2">
-      <el-button type="success" @click="dialogFormVisible = true">新建</el-button>
-      <el-dialog title="新建" v-model="dialogFormVisible">
-        <el-form :model="form">
-          <el-form-item label="ID" :label-width="formLabelWidth">
-            <el-input v-model="form.ID" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="USERID" :label-width="formLabelWidth">
-            <el-input v-model="form.USERID" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="SORTNO" :label-width="formLabelWidth">
-            <el-input v-model="form.SORTNO" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="STATUS" :label-width="formLabelWidth">
-            <el-input v-model="form.STATUS" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="LASTUPDATED" :label-width="formLabelWidth">
-            <el-input v-model="form.LASTUPDATED" auto-complete="off"></el-input>
-          </el-form-item>
+    <el-button type="success" @click="dialogFormVisible = true">新建</el-button>
+    <el-dialog title="新建" v-model="dialogFormVisible">
+      <el-form :model="form">
+        <el-form-item label="ID" :label-width="formLabelWidth">
+          <el-input v-model="form.ID" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="USERID" :label-width="formLabelWidth">
+          <el-input v-model="form.USERID" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="SORTNO" :label-width="formLabelWidth">
+          <el-input v-model="form.SORTNO" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="STATUS" :label-width="formLabelWidth">
+          <el-input v-model="form.STATUS" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="LASTUPDATED" :label-width="formLabelWidth">
+          <el-input v-model="form.LASTUPDATED" auto-complete="off"></el-input>
+        </el-form-item>
 
-          <el-form-item label="LASTNAME" :label-width="formLabelWidth">
-            <el-input v-model="form.LASTNAME" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="GENDER" :label-width="formLabelWidth">
-            <el-input v-model="form.GENDER" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="FAX" :label-width="formLabelWidth">
-            <el-input v-model="form.FAX" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="SECLEVEL" :label-width="formLabelWidth">
-            <el-input v-model="form.SECLEVEL" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="EMAIL" :label-width="formLabelWidth">
-            <el-input v-model="form.EMAIL" auto-complete="off"></el-input>
-          </el-form-item>
+        <el-form-item label="LASTNAME" :label-width="formLabelWidth">
+          <el-input v-model="form.LASTNAME" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="GENDER" :label-width="formLabelWidth">
+          <el-input v-model="form.GENDER" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="FAX" :label-width="formLabelWidth">
+          <el-input v-model="form.FAX" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="SECLEVEL" :label-width="formLabelWidth">
+          <el-input v-model="form.SECLEVEL" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="EMAIL" :label-width="formLabelWidth">
+          <el-input v-model="form.EMAIL" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="USERNAME" :label-width="formLabelWidth">
+          <el-input v-model="form.USERNAME" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="IDNO" :label-width="formLabelWidth">
+          <el-input v-model="form.IDNO" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="MEMO" :label-width="formLabelWidth">
+          <el-input v-model="form.MEMO" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="MOBILEPHONE" :label-width="formLabelWidth">
+          <el-input v-model="form.MOBILEPHONE" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="USERTYPE" :label-width="formLabelWidth">
+          <el-input v-model="form.USERTYPE" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="ADDRESS" :label-width="formLabelWidth">
+          <el-input v-model="form.ADDRESS" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="USERPW" :label-width="formLabelWidth">
+          <el-input v-model="form.USERPW" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="TELEPHONE" :label-width="formLabelWidth">
+          <el-input v-model="form.TELEPHONE" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="USERNO" :label-width="formLabelWidth">
+          <el-input v-model="form.USERNO" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="DOMAINID" :label-width="formLabelWidth">
+          <el-input v-model="form.DOMAINID" auto-complete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button type="primary" @click="handleAdd()">提交</el-button>
+      </div>
+    </el-dialog>
+    <el-button type="danger" @click="handleRemoveAll()">删除选中</el-button>
+    <el-table :data="tableData" border @selection-change="handleSelectionChange">
 
-          <el-form-item label="USERNAME" :label-width="formLabelWidth">
-            <el-input v-model="form.USERNAME" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="IDNO" :label-width="formLabelWidth">
-            <el-input v-model="form.IDNO" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="MEMO" :label-width="formLabelWidth">
-            <el-input v-model="form.MEMO" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="MOBILEPHONE" :label-width="formLabelWidth">
-            <el-input v-model="form.MOBILEPHONE" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="USERTYPE" :label-width="formLabelWidth">
-            <el-input v-model="form.USERTYPE" auto-complete="off"></el-input>
-          </el-form-item>
+      <el-table-column type="expand">
 
-          <el-form-item label="ADDRESS" :label-width="formLabelWidth">
-            <el-input v-model="form.ADDRESS" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="USERPW" :label-width="formLabelWidth">
-            <el-input v-model="form.USERPW" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="TELEPHONE" :label-width="formLabelWidth">
-            <el-input v-model="form.TELEPHONE" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="USERNO" :label-width="formLabelWidth">
-            <el-input v-model="form.USERNO" auto-complete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="DOMAINID" :label-width="formLabelWidth">
-            <el-input v-model="form.DOMAINID" auto-complete="off"></el-input>
-          </el-form-item>
-        </el-form>
-        <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">取 消</el-button>
-          <el-button type="primary" @click="handleAdd()">提交</el-button>
-        </div>
-      </el-dialog>
-      <el-button type="danger" @click="handleRemoveAll()">删除选中</el-button>
-      <el-table :data="tableData" border @selection-change="handleSelectionChange" style="width: 100%">
-        <el-table-column type="selection" width="100">
-        </el-table-column>
-        <el-table-column prop="ID" label="ID" width="130">
-        </el-table-column>
-        <el-table-column prop="USERID" label="USERID" width="120">
-        </el-table-column>
-        <el-table-column prop="SORTNO" label="SORTNO" width="100">
-        </el-table-column>
-        <el-table-column prop="STATUS" label="STATUS" width="130">
-        </el-table-column>
-        <el-table-column prop="LASTUPDATED" label="LASTUPDATED" width="150">
-        </el-table-column>
-        <el-table-column prop="LASTNAME" label="LASTNAME" width="150">
-        </el-table-column>
-        <el-table-column prop="GENDER" label="GENDER" width="100">
-        </el-table-column>
-        <el-table-column prop="FAX" label="FAX" width="100">
-        </el-table-column>
-        <el-table-column prop="SECLEVEL" label="SECLEVEL" width="150">
-        </el-table-column>
-        <el-table-column prop="EMAIL" label="EMAIL" width="100">
-        </el-table-column>
-        <el-table-column prop="USERNAME" label="USERNAME" width="150">
-        </el-table-column>
-        <el-table-column prop="IDNO" label="IDNO" width="100">
-        </el-table-column>
-        <el-table-column prop="MEMO" label="MEMO" width="100">
-        </el-table-column>
-        <el-table-column prop="MOBILEPHONE" label="MOBILEPHONE" width="150">
-        </el-table-column>
-        <el-table-column prop="USERTYPE" label="USERTYPE" width="150">
-        </el-table-column>
-        <el-table-column prop="ADDRESS" label="ADDRESS" width="150">
-        </el-table-column>
-        <el-table-column prop="USERPW" label="USERPW" width="150">
-        </el-table-column>
-        <el-table-column prop="TELEPHONE" label="TELEPHONE" width="150">
-        </el-table-column>
-        <el-table-column prop="USERNO" label="USERNO" width="150">
-        </el-table-column>
-        <el-table-column prop="DOMAINID" label="DOMAINID" width="150">
-        </el-table-column>
-        <el-table-column label="操作" width="100">
-          <template scope="scope">
-            <el-button size="small" type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-            <el-dialog title="修改" v-model="dialogForm2Visible">
-              <el-form :model="detailForm">
-                <el-form-item label="ID" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.ID" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="USERID" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.USERID" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="SORTNO" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.SORTNO" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="STATUS" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.STATUS" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="LASTUPDATED" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.LASTUPDATED" auto-complete="off"></el-input>
-                </el-form-item>
+        <template scope="props">
+          <p>SORTNO: {{ props.row.SORTNO }}</p>
+          <p>STATUS: {{ props.row.STATUS }}</p>
+          <p>LASTUPDATED: {{ props.row.LASTUPDATED }}</p>
+          <p>LASTNAME: {{ props.row.LASTNAME }}</p>
+          <p>GENDER: {{ props.row.GENDER }}</p>
+          <p>FAX: {{ props.row.FAX }}</p>
+          <p>SECLEVEL: {{ props.row.SECLEVEL }}</p>
+          <p>EMAIL: {{ props.row.EMAIL }}</p>
+          <p>USERNAME: {{ props.row.USERNAME }}</p>
+          <p>IDNO: {{ props.row.IDNO }}</p>
+          <p>MEMO: {{ props.row.MEMO }}</p>
+          <p>MOBILEPHONE: {{ props.row.MOBILEPHONE }}</p>
+          <p>USERTYPE: {{ props.row.USERTYPE }}</p>
+          <p>ADDRESS: {{ props.row.ADDRESS }}</p>
+          <p>USERPW: {{ props.row.USERPW }}</p>
+          <p>TELEPHONE: {{ props.row.TELEPHONE }}</p>
+          <p>USERNO: {{ props.row.USERNO }}</p>
+          <p>DOMAINID: {{ props.row.DOMAINID }}</p>
+        </template>
+      </el-table-column>
+      <el-table-column type="selection" width="50">
+      </el-table-column>
+      <el-table-column prop="ID" label="ID" width="300">
+      </el-table-column>
+      <el-table-column prop="USERID" label="USERID" width="400">
+      </el-table-column>
+      <el-table-column label="操作" width="117">
+        <template scope="scope">
+          <el-button size="small" type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-dialog title="修改" v-model="dialogForm2Visible">
+            <el-form :model="detailForm">
+              <el-form-item label="ID" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.ID" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="USERID" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.USERID" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="SORTNO" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.SORTNO" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="STATUS" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.STATUS" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="LASTUPDATED" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.LASTUPDATED" auto-complete="off"></el-input>
+              </el-form-item>
 
-                <el-form-item label="LASTNAME" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.LASTNAME" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="GENDER" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.GENDER" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="FAX" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.FAX" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="SECLEVEL" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.SECLEVEL" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="EMAIL" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.EMAIL" auto-complete="off"></el-input>
-                </el-form-item>
+              <el-form-item label="LASTNAME" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.LASTNAME" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="GENDER" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.GENDER" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="FAX" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.FAX" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="SECLEVEL" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.SECLEVEL" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="EMAIL" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.EMAIL" auto-complete="off"></el-input>
+              </el-form-item>
 
-                <el-form-item label="USERNAME" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.USERNAME" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="IDNO" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.IDNO" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="MEMO" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.MEMO" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="MOBILEPHONE" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.MOBILEPHONE" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="USERTYPE" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.USERTYPE" auto-complete="off"></el-input>
-                </el-form-item>
+              <el-form-item label="USERNAME" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.USERNAME" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="IDNO" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.IDNO" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="MEMO" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.MEMO" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="MOBILEPHONE" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.MOBILEPHONE" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="USERTYPE" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.USERTYPE" auto-complete="off"></el-input>
+              </el-form-item>
 
-                <el-form-item label="ADDRESS" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.ADDRESS" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="USERPW" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.USERPW" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="TELEPHONE" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.TELEPHONE" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="USERNO" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.USERNO" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="DOMAINID" :label-width="formLabelWidth">
-                  <el-input v-model="detailForm.DOMAINID" auto-complete="off"></el-input>
-                </el-form-item>
-              </el-form>
-              <div slot="footer" class="dialog-footer">
-                <el-button @click="dialogForm2Visible = false">返回</el-button>
-              </div>
-            </el-dialog>
-            <el-button size="small" type="text" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-          </template>
-        </el-table-column>
-        
-      </el-table>
-      <el-pagination layout="prev, pager, next" :total="1000">
-    </el-pagination>
-    </el-col>
+              <el-form-item label="ADDRESS" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.ADDRESS" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="USERPW" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.USERPW" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="TELEPHONE" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.TELEPHONE" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="USERNO" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.USERNO" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="DOMAINID" :label-width="formLabelWidth">
+                <el-input v-model="detailForm.DOMAINID" auto-complete="off"></el-input>
+              </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+              <el-button @click="dialogForm2Visible = false">返回</el-button>
+            </div>
+          </el-dialog>
+          <el-button size="small" type="text" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+
+</el-col>
   </div>
 </template>
 
@@ -207,7 +190,140 @@
   export default {
     data() {
       return {
-        tableData: [],
+        tableData: [
+          {
+            ID: 1,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 2,
+            USERID: '4',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: 'd',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 3,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: 'uj',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: 'd',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 4,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 5,
+            USERID: '44',
+            SORTNO: '54',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 6,
+            USERID: '64',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '6',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '6',
+            USERNO: '3',
+            DOMAINID: '3',
+          }
+        ],
         multipleSelection: [],
         dialogFormVisible: false,
         dialogForm2Visible: false,
@@ -266,7 +382,7 @@
       handleRemoveAll() {
         var selected = []
         this.multipleSelection.map(function (item, index, arry) {
-          selected.push(item.id)
+          selected.push(item.ID)
         })
         console.log(selected)
       },
@@ -313,5 +429,10 @@
 <style>
   body {
     font-family: Helvetica, sans-serif;
+    overflow: hidden;
+  }
+  #container{
+    width:950px;
+    
   }
 </style>
