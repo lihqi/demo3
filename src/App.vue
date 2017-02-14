@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-col :span="16" :offset="6">
+    <el-col :span="20" :offset="4">
 
     <el-button type="success" @click="dialogFormVisible = true">新建</el-button>
     <el-dialog title="新建" v-model="dialogFormVisible">
@@ -104,7 +104,7 @@
       </el-table-column>
       <el-table-column prop="USERID" label="USERID" width="400">
       </el-table-column>
-      <el-table-column label="操作" width="117">
+      <el-table-column label="操作" >
         <template scope="scope">
           <el-button size="small" type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
           <el-dialog title="修改" v-model="dialogForm2Visible">
@@ -181,7 +181,6 @@
         </template>
       </el-table-column>
     </el-table>
-
 </el-col>
   </div>
 </template>
@@ -429,10 +428,5 @@
 <style>
   body {
     font-family: Helvetica, sans-serif;
-    overflow: hidden;
-  }
-  #container{
-    width:950px;
-    
   }
 </style>
