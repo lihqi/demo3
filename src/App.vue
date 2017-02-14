@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
     <el-col :span="20" :offset="4">
-
     <el-button type="success" @click="dialogFormVisible = true">新建</el-button>
     <el-dialog title="新建" v-model="dialogFormVisible">
       <el-form :model="form">
@@ -74,9 +72,7 @@
     </el-dialog>
     <el-button type="danger" @click="handleRemoveAll()">删除选中</el-button>
     <el-table :data="tableData" border @selection-change="handleSelectionChange">
-
       <el-table-column type="expand">
-
         <template scope="props">
           <p>SORTNO: {{ props.row.SORTNO }}</p>
           <p>STATUS: {{ props.row.STATUS }}</p>
@@ -124,7 +120,6 @@
               <el-form-item label="LASTUPDATED" :label-width="formLabelWidth">
                 <el-input v-model="detailForm.LASTUPDATED" auto-complete="off"></el-input>
               </el-form-item>
-
               <el-form-item label="LASTNAME" :label-width="formLabelWidth">
                 <el-input v-model="detailForm.LASTNAME" auto-complete="off"></el-input>
               </el-form-item>
@@ -181,8 +176,11 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-pagination
+    layout="prev, pager, next"
+    :total="50" :size="10":page-size="10">
+  </el-pagination>
 </el-col>
-  </div>
 </template>
 
 <script>
@@ -302,6 +300,138 @@
           },
           {
             ID: 6,
+            USERID: '64',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '6',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '6',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 7,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 8,
+            USERID: '4',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: 'd',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 9,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: 'uj',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: 'd',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 10,
+            USERID: '44',
+            SORTNO: '44',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 11,
+            USERID: '44',
+            SORTNO: '54',
+            STATUS: '4',
+            LASTUPDATED: '3',
+            LASTNAME: '3',
+            GENDER: '3',
+            FAX: '3',
+            SECLEVEL: '3',
+            EMAIL: '3',
+            USERNAME: '3',
+            IDNO: '3',
+            MEMO: '3',
+            MOBILEPHONE: '3',
+            USERTYPE: '3',
+            ADDRESS: '3',
+            USERPW: '3',
+            TELEPHONE: '3',
+            USERNO: '3',
+            DOMAINID: '3',
+          },
+          {
+            ID: 12,
             USERID: '64',
             SORTNO: '44',
             STATUS: '4',
