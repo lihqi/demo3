@@ -177,14 +177,14 @@
       </el-table-column>
     </el-table>
  
-
+<el-row type="flex"  justify="center">
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
        layout=" prev, pager, next"
       :total="60">
     </el-pagination>
-
+</el-row>
 </el-col>
 </template>
 
@@ -1618,21 +1618,29 @@ export default {
       handleCurrentChange(val) {
         this.currentPage = val;
         console.log(val);
- this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
+ this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=40', {}, {
         headers: {
 
         },
         emulateJSON: true
     }).then(function(response) {
       // 这里是处理正确的回调
-
         this.tableData = response.data.subjects
         // this.articles = response.data["subjects"] 也可以
-console.log(this.tableData)
     }, function(response) {
         // 这里是处理错误的回调
         console.log(response)
     });
+    // this.$http.post('',{
+    //   'page':val
+    // }).then(function(response) {
+    //   // 这里是处理正确的回调
+    //     this.tableData = response.data.subjects
+    //     // this.articles = response.data["subjects"] 也可以
+    // }, function(response) {
+    //     // 这里是处理错误的回调
+    //     console.log(response)
+    // });
       }
     }
   }
