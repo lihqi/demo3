@@ -1,5 +1,5 @@
 <template>
-    <el-col :span="20" :offset="4">
+  <el-col :span="20" :offset="4">
     <el-button type="success" @click="dialogFormVisible = true">新建</el-button>
     <el-dialog title="新建" v-model="dialogFormVisible">
       <el-form :model="form">
@@ -100,7 +100,7 @@
       </el-table-column>
       <el-table-column prop="year" label="year" width="400">
       </el-table-column>
-      <el-table-column label="操作" >
+      <el-table-column label="操作">
         <template scope="scope">
           <el-button size="small" type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
           <el-dialog title="修改" v-model="dialogForm2Visible">
@@ -176,20 +176,16 @@
         </template>
       </el-table-column>
     </el-table>
- 
-<el-row type="flex"  justify="center">
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-       layout=" prev, pager, next"
-      :total="60">
-    </el-pagination>
-</el-row>
-</el-col>
+
+    <el-row type="flex" justify="center">
+      <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" layout=" prev, pager, next" :total="60">
+      </el-pagination>
+    </el-row>
+  </el-col>
 </template>
 
 <script>
-export default {
+  export default {
     data() {
       return {
         tableData: [
@@ -1564,7 +1560,23 @@ export default {
         }
       }
     },
+    mounted: function () {
+      this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
+        headers: {
 
+        },
+        emulateJSON: true
+      }).then(function (response) {
+        // 这里是处理正确的回调
+
+        this.tableData = response.data.subjects
+        // this.articles = response.data["subjects"] 也可以
+
+      }, function (response) {
+        // 这里是处理错误的回调
+        console.log(response)
+      });
+    },
     methods: {
       handleSelectionChange(val) {
         this.multipleSelection = val;
@@ -1618,29 +1630,29 @@ export default {
       handleCurrentChange(val) {
         this.currentPage = val;
         console.log(val);
- this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=40', {}, {
-        headers: {
+        this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=40', {}, {
+          headers: {
 
-        },
-        emulateJSON: true
-    }).then(function(response) {
-      // 这里是处理正确的回调
-        this.tableData = response.data.subjects
-        // this.articles = response.data["subjects"] 也可以
-    }, function(response) {
-        // 这里是处理错误的回调
-        console.log(response)
-    });
-    // this.$http.post('',{
-    //   'page':val
-    // }).then(function(response) {
-    //   // 这里是处理正确的回调
-    //     this.tableData = response.data.subjects
-    //     // this.articles = response.data["subjects"] 也可以
-    // }, function(response) {
-    //     // 这里是处理错误的回调
-    //     console.log(response)
-    // });
+          },
+          emulateJSON: true
+        }).then(function (response) {
+          // 这里是处理正确的回调
+          this.tableData = response.data.subjects
+          // this.articles = response.data["subjects"] 也可以
+        }, function (response) {
+          // 这里是处理错误的回调
+          console.log(response)
+        });
+        // this.$http.post('',{
+        //   'page':val
+        // }).then(function(response) {
+        //   // 这里是处理正确的回调
+        //     this.tableData = response.data.subjects
+        //     // this.articles = response.data["subjects"] 也可以
+        // }, function(response) {
+        //     // 这里是处理错误的回调
+        //     console.log(response)
+        // });
       }
     }
   }
