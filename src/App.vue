@@ -99,7 +99,7 @@
       <el-table-column label="操作">
         <template scope="scope">
           <el-button size="small" type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-          <el-dialog title="修改" v-model="dialogForm2Visible" @close="submit(scope.$index, scope.row)">
+          <el-dialog title="修改" v-model="dialogForm2Visible" >
             <el-form :model="detailForm">
               <el-form-item label="USERID" :label-width="formLabelWidth">
                 <el-input v-model="detailForm.USERID" auto-complete="off"></el-input>
@@ -162,7 +162,7 @@
               </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
-            <el-button @click="dialogForm2Visible = false">确定</el-button>
+            <el-button  @click="submit(scope.$index, scope.row)">确定</el-button>
               <el-button @click="dialogForm2Visible = false">返回</el-button>
             </div>
           </el-dialog>
@@ -408,16 +408,22 @@
       },
       handleEdit(index, row) {
         this.dialogForm2Visible = true;
-        this.detailForm = row;
+        // this.detailForm = row;
+        var copy = new Object();
+        for(var key in row){
+          copy[key] = row[key];
+        }
+        this.detailForm = copy;
       },
       submit(index,row){
-
+        this.dialogForm2Visible = false
                 var vm=this;
         var data=JSON.stringify(row);
         console.log(data)
         vm.$http.put('/asp-webapp/users',data)
         .then((response) => {
 					console.log(response)
+          row=response.data;
 				})
       },
       handleSizeChange(val) {
