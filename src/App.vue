@@ -162,7 +162,7 @@
               </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
-            <el-button  @click="submit(scope.$index, scope.row)">确定</el-button>
+            <el-button  @click="submit()">确定</el-button>
               <el-button @click="dialogForm2Visible = false">返回</el-button>
             </div>
           </el-dialog>
@@ -339,6 +339,27 @@
           TELEPHONE: '',
           USERNO: '',
           DOMAINID: '',
+        },
+        tmpForm:{
+           USERID: '',
+          SORTNO: '',
+          STATUS: '',
+          LASTUPDATED: '',
+          LASTNAME: '',
+          GENDER: '',
+          FAX: '',
+          SECLEVEL: '',
+          EMAIL: '',
+          USERNAME: '',
+          IDNO: '',
+          MEMO: '',
+          MOBILEPHONE: '',
+          USERTYPE: '',
+          ADDRESS: '',
+          USERPW: '',
+          TELEPHONE: '',
+          USERNO: '',
+          DOMAINID: '',
         }
       }
     },
@@ -408,23 +429,25 @@
       },
       handleEdit(index, row) {
         this.dialogForm2Visible = true;
-        // this.detailForm = row;
+        this.tmpForm = row;
         var copy = new Object();
         for(var key in row){
           copy[key] = row[key];
         }
         this.detailForm = copy;
       },
-      submit(index,row){
-        this.dialogForm2Visible = false
+      submit(){
                 var vm=this;
-        var data=JSON.stringify(row);
-        console.log(data)
+        var data=JSON.stringify(this.detailForm);
         vm.$http.put('/asp-webapp/users',data)
         .then((response) => {
-					console.log(response)
-          row=response.data;
+          console.log(response.data)
+          this.tmpForm=response.body;
+          console.log(this.tmpForm.USERID)
+          this.dialogForm2Visible = false
 				})
+        
+        
       },
       handleSizeChange(val) {
         console.log('ok');
