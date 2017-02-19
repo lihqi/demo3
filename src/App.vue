@@ -371,7 +371,7 @@
       }).then(function (response) {
         this.tableData = response.data
       }, function (response) {
-        console.log(response)
+        console.log(response) 
       });
     },
     methods: {
@@ -441,11 +441,14 @@
         var data=JSON.stringify(this.detailForm);
         vm.$http.put('/asp-webapp/users',data)
         .then((response) => {
-          console.log(response.data)
-          this.tmpForm=response.body;
+          console.log(response.data);
+          Object.assign(this.tmpForm,response.body);
+          // this.tmpForm=response.body;
           console.log(this.tmpForm.USERID)
           this.dialogForm2Visible = false
-				})
+        },()=>{
+          // Object.assign(this.tmpForm,{USERID:'0'});
+        })
         
         
       },
